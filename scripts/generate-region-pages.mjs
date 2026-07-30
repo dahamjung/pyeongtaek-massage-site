@@ -297,6 +297,65 @@ const allRegionLinks = [
   ["oseong-jinwi", "오성·진위"]
 ];
 
+const contextualLinkMap = {
+  songtan: {
+    homeText: "평택출장마사지 전체 방문지역 보기",
+    links: [
+      ["godeok", "고덕출장마사지 신도시 방문 안내"],
+      ["oseong-jinwi", "오성·진위출장마사지 외곽 생활권 안내"],
+      ["pyeongtaek-station", "평택역출장마사지 숙소 예약 안내"]
+    ]
+  },
+  sosabeol: {
+    homeText: "평택출장마사지 전체 코스·지역 안내",
+    links: [
+      ["pyeongtaek-station", "평택역출장마사지 역세권 방문 안내"],
+      ["paengseong", "팽성출장마사지 주거지·숙소 안내"],
+      ["godeok", "고덕출장마사지 신도시 예약 안내"]
+    ]
+  },
+  "pyeongtaek-station": {
+    homeText: "평택출장마사지 전체 생활권 확인",
+    links: [
+      ["sosabeol", "소사벌출장마사지 아파트·오피스텔 안내"],
+      ["paengseong", "팽성출장마사지 장기 숙소 안내"],
+      ["godeok", "고덕출장마사지 방문 가능 지역"]
+    ]
+  },
+  anjung: {
+    homeText: "평택출장마사지 전체 방문 범위 보기",
+    links: [
+      ["poseung", "포승출장마사지 평택항·산단 숙소 안내"],
+      ["oseong-jinwi", "오성·진위출장마사지 외곽 방문 안내"],
+      ["paengseong", "팽성출장마사지 장기 숙소 예약 안내"]
+    ]
+  },
+  poseung: {
+    homeText: "평택출장마사지 전체 지역 예약 안내",
+    links: [
+      ["anjung", "안중출장마사지 서부 생활권 안내"],
+      ["paengseong", "팽성출장마사지 주거지·숙소 안내"],
+      ["oseong-jinwi", "오성·진위출장마사지 외곽 이동 안내"]
+    ]
+  },
+  paengseong: {
+    homeText: "평택출장마사지 전체 지역과 코스 보기",
+    links: [
+      ["pyeongtaek-station", "평택역출장마사지 호텔·숙소 안내"],
+      ["sosabeol", "소사벌출장마사지 아파트 방문 안내"],
+      ["poseung", "포승출장마사지 산업단지 숙소 안내"]
+    ]
+  },
+  "oseong-jinwi": {
+    homeText: "평택출장마사지 전체 방문지역 안내",
+    links: [
+      ["songtan", "송탄출장마사지 북부 생활권 안내"],
+      ["godeok", "고덕출장마사지 신도시 방문 안내"],
+      ["anjung", "안중출장마사지 서부 외곽 안내"]
+    ]
+  }
+};
+
 function structuredData(region) {
   const url = `${SITE_URL}/${region.slug}/`;
   const faqs = faqItems(region);
@@ -445,6 +504,11 @@ function renderPage(region) {
           </article>`).join("");
   const localAreaLinks = region.areas.map((area, index) => `<a href="#area-${index + 1}">${area.name}</a>`).join("");
   const relatedLinks = allRegionLinks.map(([slug, label]) => `<a href="../${slug}/"${slug === region.slug ? ' aria-current="page"' : ""}>${label}</a>`).join("");
+  const contextualLinks = contextualLinkMap[region.slug];
+  const contextualLinkMarkup = [
+    `<a href="../"><span>${contextualLinks.homeText}</span><i aria-hidden="true">→</i></a>`,
+    ...contextualLinks.links.map(([slug, text]) => `<a href="../${slug}/"><span>${text}</span><i aria-hidden="true">→</i></a>`)
+  ].join("");
   const faqMarkup = faqs.map((faq, index) => `
           <details>
             <summary><span>${String(index + 1).padStart(2, "0")}</span>${faq.question}<i aria-hidden="true"></i></summary>
@@ -480,7 +544,7 @@ function renderPage(region) {
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="preload" href="../images/hero.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="../css/style.css?v=20260731-3">
+  <link rel="stylesheet" href="../css/style.css?v=20260731-4">
   <script src="../js/main.js?v=20260731-2" defer></script>
   <script type="application/ld+json" id="structured-data">
 ${jsonLd}
@@ -559,7 +623,15 @@ ${priceCards(region)}
       </div>
     </section>
     <section class="section section--light" aria-labelledby="other-region-title">
-      <div class="container"><div class="section-heading section-heading--center"><p class="eyebrow eyebrow--dark"><span></span> OTHER AREAS</p><h2 id="other-region-title">다른 평택 지역 안내</h2><p>현재 위치와 가까운 지역 페이지에서 방문 범위와 이용 조건을 확인하세요.</p></div><nav class="region-chips" aria-label="다른 평택 지역 페이지">${relatedLinks}</nav></div>
+      <div class="container">
+        <div class="section-heading section-heading--center"><p class="eyebrow eyebrow--dark"><span></span> OTHER AREAS</p><h2 id="other-region-title">다른 평택 지역 안내</h2><p>현재 위치와 가까운 지역 페이지에서 방문 범위와 이용 조건을 확인하세요.</p></div>
+        <div class="contextual-links" aria-labelledby="${region.slug}-nearby-title">
+          <h3 id="${region.slug}-nearby-title">${region.name}와 함께 살펴볼 인접 생활권</h3>
+          <p>지역별 이동 조건과 숙소·주거지 안내가 다르므로 실제 이용 장소와 가까운 상세 페이지를 확인해 보세요.</p>
+          <nav class="contextual-link-grid" aria-label="${region.name} 인접 지역 상세 안내">${contextualLinkMarkup}</nav>
+        </div>
+        <nav class="region-chips" aria-label="다른 평택 지역 페이지">${relatedLinks}</nav>
+      </div>
     </section>
     <section class="final-cta" aria-labelledby="final-title">
       <div class="final-cta__glow" aria-hidden="true"></div><div class="container final-cta__inner"><p class="eyebrow"><span></span> ${region.slug.toUpperCase()} RESERVATION</p><h2 id="final-title">${region.name} 현재 위치와<br>희망 시간을 알려주세요</h2><p>이용 가능한 코스와 예상 방문시간을 확인해 안내합니다.</p><div class="final-actions"><a class="button button--gold" href="tel:050718598915" data-action="phone-click">전화하기</a><a class="button button--light" href="sms:050718598915" data-action="sms-click">문자 보내기</a></div><p class="final-note">상담 시 <strong>${region.name} 내 위치 · 희망 시간 · 코스</strong>를 함께 보내주세요.</p></div>
