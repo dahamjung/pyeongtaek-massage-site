@@ -73,8 +73,8 @@ const SITE_CONFIG = {
       'link[rel="canonical"]': normalizedPageUrl,
       'link[rel="alternate"][hreflang="ko-KR"]': normalizedPageUrl,
       'meta[property="og:url"]': normalizedPageUrl,
-      'meta[property="og:image"]': `${normalizedDomain}images/hero.webp`,
-      'meta[name="twitter:image"]': `${normalizedDomain}images/hero.webp`
+      'meta[property="og:image"]': `${normalizedDomain}images/og-pyeongtaek.jpg`,
+      'meta[name="twitter:image"]': `${normalizedDomain}images/og-pyeongtaek.jpg`
     };
 
     Object.entries(metadata).forEach(([selector, value]) => {

@@ -89,29 +89,25 @@ const SITE_CONFIG = {
 
 ## 배포
 
-### GitHub Pages
+### Cloudflare Pages
 
-저장소 루트에 이 파일 구조를 그대로 올리고 Pages의 배포 소스를 루트로 지정합니다. 프로젝트 하위 경로에서도 상대경로로 동작합니다. 한글 도메인은 DNS 설정 시 퓨니코드 `xn--hz2b29j7ogx9bb7g1wfu3f.kr`로 입력해야 할 수 있습니다.
+현재 운영 주소는 `https://ptvisitcare.kr/`이며 GitHub `main` 브랜치가 Cloudflare Pages 프로젝트 `pyeongtaek-massage-site`로 자동 배포됩니다. 빌드 명령과 별도 출력 디렉터리 없이 저장소 루트의 정적 파일을 배포합니다.
 
-현재 GitHub Pages 주소는 `https://ptvisitcare.kr/`입니다. 별도 도메인을 연결하면 `SITE_CONFIG.domain`, canonical, 구조화 데이터, `robots.txt`, `sitemap.xml`을 새 주소로 함께 교체합니다.
-
-### 일반 정적 호스팅 / Cloudflare
-
-빌드 명령 없이 폴더 전체를 업로드합니다. 문서 루트는 `index.html`이 있는 위치이며 출력 디렉터리도 현재 루트입니다. 도메인 연결 후 HTTPS가 정상 발급됐는지 확인하고 Search Console에 sitemap URL을 제출하세요.
+기본 `pages.dev` 주소는 대표 도메인으로 301 리디렉션하며 GitHub Pages 배포는 비활성화되어 있습니다. Google Search Console 등록과 `https://ptvisitcare.kr/sitemap.xml` 제출도 완료했습니다.
 
 ## 배포 전 placeholder 체크리스트
 
 - [x] `SITE_CONFIG.phone`: `0507-1859-8915`
 - [x] `SITE_CONFIG.sms`: `0507-1859-8915`
 - [x] `SITE_CONFIG.smsMessage`: `사이트 보고 문의드립니다:) `
-- [ ] `SITE_CONFIG.businessName`: 실제 상호명
-- [ ] 푸터 대표자명, 주소, 연락처
+- [x] `SITE_CONFIG.businessName`: `평택출장마사지`
+- [x] 푸터 대표자명, 주소, 연락처
 - [ ] 개인정보처리방침 전문과 개인정보 책임자·문의처
 - [ ] 이용약관, 예약 변경·취소 및 결제 기준
 - [ ] 상담 24시간, 방문 범위, 선입금 없음 등 실제 운영 조건 확인
 - [ ] 가능한 결제 수단과 외곽 지역 추가 비용 기준
-- [ ] JSON-LD Organization의 상호명, 전화번호, 주소
-- [ ] 실제 도메인이 다를 경우 canonical, OG, robots.txt, sitemap.xml
+- [x] JSON-LD Organization의 상호명, 전화번호, 주소
+- [x] canonical, OG, robots.txt, sitemap.xml을 대표 도메인으로 통일
 - [ ] 실제 운영 형태가 확정된 경우에만 LocalBusiness 계열 구조화 데이터 추가
 
 실제 후기, 관리사 개인정보, 인증·수상·평점은 확인 가능한 자료가 있을 때만 추가하세요.

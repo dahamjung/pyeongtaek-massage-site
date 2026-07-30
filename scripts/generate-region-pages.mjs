@@ -13,6 +13,14 @@ const regions = [
     summary: "송탄역·서정동·신장동",
     quote: "“서정동 오피스텔 / 오늘 오후 10시 / 아로마 90분 문의합니다.”",
     timing: "송탄역과 서정리역 주변은 시간대에 따라 차량 흐름이 달라질 수 있습니다.",
+    localGuide: [
+      "송탄역·신장동의 숙박시설과 서정동·이충동의 아파트는 확인해야 할 출입 정보가 서로 다릅니다. 숙소라면 정확한 지점명과 로비 호출 방법을, 공동주택이라면 방문 차량 등록과 공동현관 호출 방법을 알려주세요.",
+      "골목 주거지나 상권 인근은 건물 이름만으로 입구를 찾기 어려울 수 있습니다. 가까운 도로명이나 눈에 띄는 건물, 주차 가능한 위치를 함께 전달하면 배정 동선을 더 정확하게 확인할 수 있습니다."
+    ],
+    localFaq: {
+      question: "송탄역 숙소와 서정동 아파트는 예약할 때 무엇이 다른가요?",
+      answer: "송탄역 인근 숙소는 정확한 지점명과 외부인 출입 방법을, 서정동 아파트는 단지명과 방문 차량 등록 여부를 우선 확인합니다. 현재 위치에 맞는 정보를 문자로 보내주시면 됩니다."
+    },
     areas: [
       {
         name: "송탄역·지산동",
@@ -45,6 +53,14 @@ const regions = [
     summary: "비전동·동삭동·용이동",
     quote: "“비전동 아파트 / 오늘 오후 9시 / 타이 90분 문의합니다.”",
     timing: "소사벌 상업지구는 저녁 시간 주차와 차량 흐름을 함께 확인합니다.",
+    localGuide: [
+      "소사벌 상업지구의 오피스텔과 비전동·동삭동의 대단지 아파트는 주차장 입구와 방문 등록 방식이 다를 수 있습니다. 같은 건물에 상가와 주거 출입구가 나뉘는 경우 이용할 입구를 먼저 알려주세요.",
+      "용이동·죽백동처럼 생활권 경계에 가까운 위치는 동 이름만 전달하는 것보다 정확한 주소나 가까운 단지명을 함께 보내는 편이 좋습니다. 희망시간과 출입 정보를 한 번에 전달하면 가능 여부를 빠르게 확인할 수 있습니다."
+    ],
+    localFaq: {
+      question: "소사벌 상업지구 오피스텔은 주차 정보를 꼭 알려야 하나요?",
+      answer: "상가 주차장과 주거 전용 주차장이 구분된 건물이 있어 입구와 방문 등록 방법을 미리 확인하는 것이 좋습니다. 등록이 필요하지 않다면 그 점도 함께 알려주세요."
+    },
     areas: [
       {
         name: "비전동·소사벌 상업지구",
@@ -77,6 +93,14 @@ const regions = [
     summary: "평택동·통복동·합정동",
     quote: "“평택역 인근 호텔 / 오늘 오후 11시 / 아로마 90분 문의합니다.”",
     timing: "평택역 주변은 숙소명과 지점, 희망 시작시간을 함께 알려주세요.",
+    localGuide: [
+      "평택역 주변에는 비슷한 이름의 숙소가 있을 수 있으므로 상호만 보내기보다 정확한 지점명이나 도로명을 함께 알려주세요. 로비에서 객실 호출이 필요한지, 외부인 출입이 가능한지도 예약 전에 확인합니다.",
+      "통복동·합정동의 시장과 상권 주변은 골목 진입과 주차 위치에 따라 접근 경로가 달라질 수 있습니다. 차량이 들어갈 수 있는 입구나 가까운 건물을 알려주면 불필요한 대기 시간을 줄이는 데 도움이 됩니다."
+    ],
+    localFaq: {
+      question: "평택역 인근 호텔은 숙소 이름만 보내면 되나요?",
+      answer: "같은 이름이나 비슷한 이름의 숙소가 있을 수 있어 정확한 지점명, 도로명 또는 지도에서 확인되는 주소를 함께 보내주세요. 외부인 출입 규정도 예약 전에 확인해야 합니다."
+    },
     areas: [
       {
         name: "평택역·평택동",
@@ -109,6 +133,14 @@ const regions = [
     summary: "현화리·송담지구·학현리",
     quote: "“안중읍 현화리 아파트 / 오늘 오후 9시 / 타이 90분 문의합니다.”",
     timing: "안중은 평택 중심권보다 이동시간이 길 수 있어 여유 있게 문의해 주세요.",
+    localGuide: [
+      "현화리·송담지구의 아파트는 단지명과 차량 등록 정보를 중심으로 확인하고, 학현리·금곡리 같은 외곽 생활권은 정확한 주소와 진입로 정보를 함께 확인합니다. 같은 안중읍 안에서도 위치 조건에 따라 안내가 달라질 수 있습니다.",
+      "희망 시작시간이 정해져 있다면 가능한 한 여유 있게 문의해 주세요. 배정 가능 여부와 이동 조건을 먼저 확인한 뒤 예상 방문시간과 추가 이동 비용 여부를 예약 확정 전에 안내합니다."
+    ],
+    localFaq: {
+      question: "안중 외곽 지역은 추가 비용이 바로 발생하나요?",
+      answer: "지역명만으로 추가 비용을 정하지 않고 정확한 위치와 이동 조건을 확인합니다. 추가 비용이 필요한 경우에는 예약을 확정하기 전에 먼저 안내합니다."
+    },
     areas: [
       {
         name: "현화리·현화지구",
@@ -141,6 +173,14 @@ const regions = [
     summary: "평택항·도곡리·만호리",
     quote: "“포승읍 도곡리 숙소 / 오늘 오후 10시 / 아로마 90분 문의합니다.”",
     timing: "포승과 평택항 인근은 정확한 숙소명과 산업단지 위치를 먼저 확인합니다.",
+    localGuide: [
+      "포승읍은 도곡리 주거지와 평택항·산업단지 인근 숙소의 위치 조건이 크게 다를 수 있습니다. 사업장 이름만 보내기보다 실제 이용할 숙소 주소나 가까운 도로명을 전달해 주세요.",
+      "교대 전후 시간에는 희망시간과 현재 위치를 함께 확인해야 합니다. 장기 숙소는 외부인 출입 여부와 주차 가능한 위치를 먼저 확인하고, 이동 가능 여부와 예상 방문시간을 안내합니다."
+    ],
+    localFaq: {
+      question: "평택항이나 산업단지 근무지는 회사 이름만 보내도 되나요?",
+      answer: "회사와 실제 숙소가 떨어져 있을 수 있어 이용할 장소의 정확한 주소가 필요합니다. 가까운 건물명, 숙소명과 주차 가능 위치도 함께 보내주세요."
+    },
     areas: [
       {
         name: "도곡리·포승 생활권",
@@ -173,6 +213,14 @@ const regions = [
     summary: "안정리·객사리·송화리",
     quote: "“팽성읍 안정리 장기 숙소 / 오늘 오후 9시 / 타이 90분 문의합니다.”",
     timing: "팽성은 숙소와 주거지별 보안·외부인 출입 조건을 먼저 확인해 주세요.",
+    localGuide: [
+      "안정리 장기 숙소와 객사리 아파트는 보안 게이트, 로비 호출과 방문 차량 등록 방식이 서로 다를 수 있습니다. 예약 전에 외부인 출입이 가능한지 확인하고 이용 가능한 출입 방법을 알려주세요.",
+      "송화리·내리 등 주택과 외곽 생활권은 골목 진입과 주차 공간을 함께 확인합니다. 정확한 주소와 가까운 건물명을 보내주면 현재 배정 위치를 기준으로 방문 가능 여부를 살펴봅니다."
+    ],
+    localFaq: {
+      question: "팽성 장기 숙소에 보안 게이트가 있으면 예약이 어려운가요?",
+      answer: "외부인 출입이 허용되고 정상적인 방문 확인 절차를 이용할 수 있다면 위치를 확인할 수 있습니다. 우회 출입이나 규정을 벗어난 요청은 진행하지 않습니다."
+    },
     areas: [
       {
         name: "안정리",
@@ -205,6 +253,14 @@ const regions = [
     summary: "오성면·진위면·세교동",
     quote: "“진위면 사업장 인근 숙소 / 오늘 오후 9시 / 아로마 90분 문의합니다.”",
     timing: "오성·진위 외곽 지역은 주소와 가까운 건물명을 함께 알려주세요.",
+    localGuide: [
+      "오성면과 진위면은 넓은 외곽 생활권이어서 면 이름만으로는 이동 위치를 정확히 판단하기 어렵습니다. 도로명 주소와 가까운 건물, 진입 가능한 도로를 함께 알려주세요.",
+      "세교동 아파트는 단지 출입과 차량 등록 정보를 중심으로 확인하고, 산업단지 인근 숙소는 실제 이용 장소와 교대 시간을 함께 확인합니다. 서로 다른 생활권을 묶어 단정적인 방문시간을 안내하지 않습니다."
+    ],
+    localFaq: {
+      question: "오성면이나 진위면은 주소를 꼭 보내야 하나요?",
+      answer: "생활권이 넓고 같은 리 안에서도 진입 경로가 달라질 수 있어 정확한 도로명 주소가 필요합니다. 주소 전달이 어렵다면 가까운 건물명과 도로 위치를 함께 알려주세요."
+    },
     areas: [
       {
         name: "오성면·숙성리",
@@ -343,7 +399,8 @@ function faqItems(region) {
     {
       question: "예약금이나 선입금이 필요한가요?",
       answer: "현재 안내 기준으로 예약금과 선입금은 받지 않습니다. 관리사 도착 후 예약한 코스와 결제 방식을 다시 확인합니다."
-    }
+    },
+    region.localFaq
   ];
 }
 
@@ -408,19 +465,19 @@ function renderPage(region) {
   <meta property="og:title" content="${region.name}출장마사지 | 평택 ${region.name} 방문 케어">
   <meta property="og:description" content="${region.description}">
   <meta property="og:url" content="${url}">
-  <meta property="og:image" content="${SITE_URL}/images/hero.webp">
-  <meta property="og:image:width" content="1600">
-  <meta property="og:image:height" content="900">
+  <meta property="og:image" content="${SITE_URL}/images/og-pyeongtaek.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="차분하게 정돈된 ${region.name} 방문 케어 준비 공간">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${region.name}출장마사지 방문 안내">
   <meta name="twitter:description" content="${region.description}">
-  <meta name="twitter:image" content="${SITE_URL}/images/hero.webp">
+  <meta name="twitter:image" content="${SITE_URL}/images/og-pyeongtaek.jpg">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="preload" href="../images/hero.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="../css/style.css?v=20260730-5">
-  <script src="../js/main.js?v=20260731-1" defer></script>
+  <link rel="stylesheet" href="../css/style.css?v=20260731-2">
+  <script src="../js/main.js?v=20260731-2" defer></script>
   <script type="application/ld+json" id="structured-data">
 ${jsonLd}
   </script>
@@ -430,7 +487,7 @@ ${jsonLd}
   <div class="site-notice" role="note"><div class="container site-notice__inner"><span>${region.name} 생활권 예약제 방문</span><span aria-hidden="true">·</span><span>상담 24시간</span></div></div>
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="../" aria-label="평택출장마사지 메인 페이지"><img class="brand-logo" src="../images/logo-pyeongtaek.png" width="1200" height="221" alt="평택출장마사지"></a>
+      <a class="brand" href="../" aria-label="평택출장마사지 메인 페이지"><img class="brand-logo" src="../images/logo-pyeongtaek.webp" width="600" height="111" alt="평택출장마사지"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="메뉴 열기" data-menu-toggle><span></span><span></span><span></span></button>
       <nav class="primary-nav" id="primary-navigation" aria-label="주요 메뉴" data-nav>
         <a href="#area">${region.name} 방문지역</a><a href="#price">코스·가격</a><a href="#process">이용방법</a><a href="#faq">FAQ</a><a href="../">평택 전체</a>
@@ -464,6 +521,11 @@ ${jsonLd}
         <nav class="region-chips" aria-label="${region.name} 지역 바로가기">${localAreaLinks}</nav>
         <div class="region-grid">${regionCards}
         </div>
+        <article class="local-guide" aria-labelledby="${region.slug}-guide-title">
+          <p class="eyebrow eyebrow--dark"><span></span> LOCAL BOOKING GUIDE</p>
+          <h3 id="${region.slug}-guide-title">${region.name} 생활권 예약 체크포인트</h3>
+          ${region.localGuide.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+        </article>
       </div>
     </section>
     <section class="section section--cream" id="price" aria-labelledby="price-title">
@@ -500,7 +562,7 @@ ${priceCards(region)}
     </section>
   </main>
   <footer class="site-footer">
-    <div class="container footer-main"><div class="footer-brand"><a class="brand" href="../" aria-label="평택출장마사지 메인 페이지"><img class="brand-logo" src="../images/logo-pyeongtaek.png" width="1200" height="221" alt="평택출장마사지"></a><p>${region.name} 생활권의 자택과 숙소로 방문하는 예약제 휴식·바디 케어 서비스를 안내합니다.</p></div><dl class="business-info"><div><dt>상호명</dt><dd data-config-business>평택출장마사지</dd></div><div><dt>대표자</dt><dd>강철민</dd></div><div><dt>연락처</dt><dd><a href="tel:050718598915" data-action="phone-click" data-config-phone>0507-1859-8915</a></dd></div><div><dt>주소</dt><dd>경기 평택시 평택로28번길 24 (우 17912)</dd></div><div><dt>운영지역</dt><dd>${region.name} 및 평택 전 지역</dd></div></dl></div>
+    <div class="container footer-main"><div class="footer-brand"><a class="brand" href="../" aria-label="평택출장마사지 메인 페이지"><img class="brand-logo" src="../images/logo-pyeongtaek.webp" width="600" height="111" alt="평택출장마사지"></a><p>${region.name} 생활권의 자택과 숙소로 방문하는 예약제 휴식·바디 케어 서비스를 안내합니다.</p></div><dl class="business-info"><div><dt>상호명</dt><dd data-config-business>평택출장마사지</dd></div><div><dt>대표자</dt><dd>강철민</dd></div><div><dt>연락처</dt><dd><a href="tel:050718598915" data-action="phone-click" data-config-phone>0507-1859-8915</a></dd></div><div><dt>주소</dt><dd>경기 평택시 평택로28번길 24 (우 17912)</dd></div><div><dt>운영지역</dt><dd>${region.name} 및 평택 전 지역</dd></div></dl></div>
     <div class="container footer-legal"><details id="privacy"><summary>개인정보처리방침</summary><p>개인정보처리방침 내용 입력. 상담 과정에서 수집하는 정보와 이용 목적, 보유 기간, 파기 방법 및 문의처를 실제 운영 기준에 맞춰 작성하세요.</p></details><details id="terms"><summary>이용약관</summary><p>이용약관 내용 입력. 서비스 범위와 예약 확정, 변경·취소, 결제 및 이용 제한 기준을 실제 운영 정책에 맞춰 작성하세요.</p></details></div>
     <div class="footer-bottom"><div class="container"><p>© <span data-current-year>2026</span> <span data-config-business>평택출장마사지</span>. All rights reserved.</p><p>본 서비스는 의료 행위가 아닌 일반적인 휴식·바디 케어 안내입니다.</p></div></div>
   </footer>
