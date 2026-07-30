@@ -1,0 +1,19 @@
+{
+  "name": "평택출장마사지",
+  "short_name": "평택출장마사지",
+  "description": "평택 전 지역 예약제 방문 케어 서비스 안내",
+  "lang": "ko-KR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
