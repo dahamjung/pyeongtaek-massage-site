@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const SITE_URL = "https://xn--hz2b29j7ogx9bb7g1wfu3f.kr";
+const SITE_URL = "https://dahamjung.github.io/pyeongtaek-massage-site";
 
 const regions = [
   {
@@ -418,8 +418,8 @@ function renderPage(region) {
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="preload" href="../images/hero.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="../css/style.css?v=20260730-3">
-  <script src="../js/main.js?v=20260730-3" defer></script>
+  <link rel="stylesheet" href="../css/style.css?v=20260730-4">
+  <script src="../js/main.js?v=20260730-4" defer></script>
   <script type="application/ld+json" id="structured-data">
 ${jsonLd}
   </script>

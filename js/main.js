@@ -3,7 +3,7 @@ const SITE_CONFIG = {
   sms: "0507-1859-8915",
   smsMessage: "사이트 보고 문의드립니다:) ",
   businessName: "상호명 입력",
-  domain: "https://평택출장마사지.kr"
+  domain: "https://dahamjung.github.io/pyeongtaek-massage-site/"
 };
 
 (function () {
@@ -24,11 +24,11 @@ const SITE_CONFIG = {
       url.pathname = "/";
       return url.href;
     } catch (_error) {
-      return "https://xn--hz2b29j7ogx9bb7g1wfu3f.kr/";
+      return "https://dahamjung.github.io/pyeongtaek-massage-site/";
     }
   })();
   const normalizedPageUrl = (() => {
-    const pagePath = document.documentElement.dataset.pagePath || "/";
+    const pagePath = (document.documentElement.dataset.pagePath || "/").replace(/^\/+/, "");
     try {
       return new URL(pagePath, normalizedDomain).href;
     } catch (_error) {
