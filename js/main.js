@@ -2,7 +2,7 @@ const SITE_CONFIG = {
   phone: "0507-1859-8915",
   sms: "0507-1859-8915",
   smsMessage: "사이트 보고 문의드립니다:) ",
-  businessName: "상호명 입력",
+  businessName: "평택출장마사지",
   domain: "https://ptvisitcare.kr/"
 };
 
