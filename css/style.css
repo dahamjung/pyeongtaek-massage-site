@@ -1396,8 +1396,28 @@ p:last-child {
 
 .footer-legal {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
   padding-bottom: 30px;
   gap: 8px;
+}
+
+.footer-legal > a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9px;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.footer-legal > a:hover {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-legal details {
@@ -1437,6 +1457,88 @@ p:last-child {
   margin: 0;
   color: rgba(255, 255, 255, 0.35);
   font-size: 0.67rem;
+}
+
+.legal-page {
+  min-height: 60vh;
+  padding: clamp(64px, 9vw, 112px) 0;
+  background: var(--ivory);
+}
+
+.legal-page__header {
+  max-width: 820px;
+  margin-bottom: 42px;
+}
+
+.legal-page__header h1 {
+  margin: 12px 0 16px;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.08;
+}
+
+.legal-page__header > p:last-child {
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.legal-document {
+  max-width: 900px;
+  padding: clamp(28px, 5vw, 54px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.legal-document section + section {
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-document h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: clamp(1.05rem, 3vw, 1.32rem);
+}
+
+.legal-document p,
+.legal-document li {
+  color: var(--gray);
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+
+.legal-document p {
+  margin: 0;
+}
+
+.legal-document p + p,
+.legal-document ul,
+.legal-document ol {
+  margin-top: 10px;
+}
+
+.legal-document ul,
+.legal-document ol {
+  padding-left: 1.25rem;
+}
+
+.legal-document a {
+  color: var(--gold-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-document .legal-note {
+  padding: 16px 18px;
+  color: var(--navy);
+  background: var(--ivory-deep);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
 }
 
 .mobile-cta {
