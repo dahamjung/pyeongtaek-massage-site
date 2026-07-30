@@ -3,7 +3,7 @@ const SITE_CONFIG = {
   sms: "0507-1859-8915",
   smsMessage: "사이트 보고 문의드립니다:) ",
   businessName: "상호명 입력",
-  domain: "https://dahamjung.github.io/pyeongtaek-massage-site/"
+  domain: "https://ptvisitcare.kr/"
 };
 
 (function () {
@@ -26,7 +26,7 @@ const SITE_CONFIG = {
       url.hash = "";
       return url.href;
     } catch (_error) {
-      return "https://dahamjung.github.io/pyeongtaek-massage-site/";
+      return "https://ptvisitcare.kr/";
     }
   })();
   const normalizedPageUrl = (() => {

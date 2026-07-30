@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const SITE_URL = "https://dahamjung.github.io/pyeongtaek-massage-site";
+const SITE_URL = "https://ptvisitcare.kr";
 
 const regions = [
   {

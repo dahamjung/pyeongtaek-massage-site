@@ -30,7 +30,7 @@ const SITE_CONFIG = {
   sms: "0507-1859-8915",
   smsMessage: "사이트 보고 문의드립니다:) ",
   businessName: "상호명 입력",
-  domain: "https://dahamjung.github.io/pyeongtaek-massage-site/"
+  domain: "https://ptvisitcare.kr/"
 };
 ```
 
@@ -93,7 +93,7 @@ const SITE_CONFIG = {
 
 저장소 루트에 이 파일 구조를 그대로 올리고 Pages의 배포 소스를 루트로 지정합니다. 프로젝트 하위 경로에서도 상대경로로 동작합니다. 한글 도메인은 DNS 설정 시 퓨니코드 `xn--hz2b29j7ogx9bb7g1wfu3f.kr`로 입력해야 할 수 있습니다.
 
-현재 GitHub Pages 주소는 `https://dahamjung.github.io/pyeongtaek-massage-site/`입니다. 별도 도메인을 연결하면 `SITE_CONFIG.domain`, canonical, 구조화 데이터, `robots.txt`, `sitemap.xml`을 새 주소로 함께 교체합니다.
+현재 GitHub Pages 주소는 `https://ptvisitcare.kr/`입니다. 별도 도메인을 연결하면 `SITE_CONFIG.domain`, canonical, 구조화 데이터, `robots.txt`, `sitemap.xml`을 새 주소로 함께 교체합니다.
 
 ### 일반 정적 호스팅 / Cloudflare
 
