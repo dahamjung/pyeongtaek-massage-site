@@ -398,7 +398,11 @@ function faqItems(region) {
     },
     {
       question: "예약금이나 선입금이 필요한가요?",
-      answer: "현재 안내 기준으로 예약금과 선입금은 받지 않습니다. 관리사 도착 후 예약한 코스와 결제 방식을 다시 확인합니다."
+      answer: "예약금과 선입금은 받지 않습니다. 결제는 현금, 계좌이체, 카드 모두 가능하며 관리사 도착 후 예약한 코스를 다시 확인합니다."
+    },
+    {
+      question: "예약을 취소하면 비용이 발생하나요?",
+      answer: "비용 없이 취소하려면 예약 요청 후 5분 이내에 전화나 문자로 알려주세요. 이후에는 관리사 배정과 이동 상황에 따라 취소 비용이 발생할 수 있으며 적용 여부는 상담으로 안내합니다."
     },
     region.localFaq
   ];
@@ -532,19 +536,19 @@ ${jsonLd}
       <div class="container">
         <div class="section-heading section-heading--split"><div><p class="eyebrow eyebrow--dark"><span></span> COURSE &amp; PRICE</p><h2 id="price-title">${region.name} 방문 코스 및 가격</h2></div><p>원하는 방식과 시간을 선택한 뒤 ${region.name} 내 현재 위치와 희망 시작시간을 알려주세요. 최종 가능 여부는 예약 전에 확인합니다.</p></div>
 ${priceCards(region)}
-        <p class="price-note"><span aria-hidden="true">ⓘ</span> 외곽 또는 특수 이동 조건의 추가 비용 여부는 예약 확정 전에 먼저 안내합니다.</p>
+        <p class="price-note"><span aria-hidden="true">ⓘ</span> 일부 외곽지역은 추가 비용이 발생할 수 있으며 예약 확정 전에 상담으로 먼저 안내합니다.</p>
       </div>
     </section>
     <section class="section section--navy process-section" id="process" aria-labelledby="process-title">
       <div class="container">
         <div class="section-heading section-heading--split"><div><p class="eyebrow"><span></span> HOW TO BOOK</p><h2 id="process-title">${region.name} 예약 및 이용 방법</h2></div><p>위치, 시간, 코스 세 가지를 전달하면 배정과 이동 조건을 확인한 뒤 예약을 확정합니다.</p></div>
-        <ol class="process-list"><li><span>01</span><div><h3>현재 위치 전달</h3><p>동 또는 가까운 건물명과 이용 장소를 알려주세요.</p></div></li><li><span>02</span><div><h3>시간·코스 선택</h3><p>희망 시작시간과 원하는 코스를 전달해 주세요.</p></div></li><li><span>03</span><div><h3>배정 확인</h3><p>이용 가능 여부와 예상 방문시간을 안내합니다.</p></div></li><li><span>04</span><div><h3>출입 정보 전달</h3><p>주차와 공동현관 또는 숙소 호출 방법을 공유해 주세요.</p></div></li><li><span>05</span><div><h3>도착 후 확인</h3><p>예약 코스와 결제 방식을 다시 확인합니다.</p></div></li></ol>
+        <ol class="process-list"><li><span>01</span><div><h3>현재 위치 전달</h3><p>동 또는 가까운 건물명과 이용 장소를 알려주세요.</p></div></li><li><span>02</span><div><h3>시간·코스 선택</h3><p>희망 시작시간과 원하는 코스를 전달해 주세요.</p></div></li><li><span>03</span><div><h3>배정 확인</h3><p>이용 가능 여부와 예상 방문시간을 안내합니다.</p></div></li><li><span>04</span><div><h3>출입 정보 전달</h3><p>주차와 공동현관 또는 숙소 호출 방법을 공유해 주세요.</p></div></li><li><span>05</span><div><h3>도착 후 확인</h3><p>예약 코스를 확인하고 현금·계좌이체·카드 중 결제 방식을 선택합니다.</p></div></li></ol>
       </div>
     </section>
     <section class="section section--light" id="booking-info" aria-labelledby="booking-title">
       <div class="container booking-layout">
         <div class="booking-copy"><p class="eyebrow eyebrow--dark"><span></span> BEFORE BOOKING</p><h2 id="booking-title">${region.name} 방문 전 확인사항</h2><p>${region.timing} 정확한 위치와 출입 조건을 미리 알려주면 방문 안내가 원활합니다.</p><div class="booking-contact"><p>예약할 때 이렇게 보내주세요</p><blockquote>${region.quote}</blockquote><a class="text-link text-link--dark" href="sms:050718598915" data-action="sms-click">문자로 바로 문의하기 <span aria-hidden="true">→</span></a></div></div>
-        <ul class="notice-list"><li><span aria-hidden="true">✓</span><div><strong>공동현관 호출 방법</strong><p>방문 호출 또는 출입 방법을 확인해 주세요.</p></div></li><li><span aria-hidden="true">✓</span><div><strong>방문 차량 등록</strong><p>사전 등록이 필요한 장소는 등록 방식을 알려주세요.</p></div></li><li><span aria-hidden="true">✓</span><div><strong>숙소 외부인 규정</strong><p>호텔과 장기 숙소는 외부인 출입 가능 여부를 확인해 주세요.</p></div></li><li><span aria-hidden="true">✓</span><div><strong>변경·취소 사전 연락</strong><p>배정과 이동 전 가능한 빨리 상담 채널로 알려주세요.</p></div></li><li><span aria-hidden="true">!</span><div><strong>과도한 음주 시 제한</strong><p>안전한 진행이 어렵다면 이용이 제한될 수 있습니다.</p></div></li><li><span aria-hidden="true">!</span><div><strong>서비스 범위 준수</strong><p>불법적이거나 안내 범위를 벗어난 요청은 거절합니다.</p></div></li></ul>
+        <ul class="notice-list"><li><span aria-hidden="true">✓</span><div><strong>공동현관 호출 방법</strong><p>방문 호출 또는 출입 방법을 확인해 주세요.</p></div></li><li><span aria-hidden="true">✓</span><div><strong>방문 차량 등록</strong><p>사전 등록이 필요한 장소는 등록 방식을 알려주세요.</p></div></li><li><span aria-hidden="true">✓</span><div><strong>숙소 외부인 규정</strong><p>호텔과 장기 숙소는 외부인 출입 가능 여부를 확인해 주세요.</p></div></li><li><span aria-hidden="true">✓</span><div><strong>요청 후 5분 내 취소</strong><p>비용 없는 취소를 원하면 예약 요청 후 5분 이내에 전화나 문자로 알려주세요.</p></div></li><li><span aria-hidden="true">!</span><div><strong>과도한 음주 시 제한</strong><p>안전한 진행이 어렵다면 이용이 제한될 수 있습니다.</p></div></li><li><span aria-hidden="true">!</span><div><strong>서비스 범위 준수</strong><p>불법적이거나 안내 범위를 벗어난 요청은 거절합니다.</p></div></li></ul>
       </div>
     </section>
     <section class="section section--cream" id="faq" aria-labelledby="faq-title">
