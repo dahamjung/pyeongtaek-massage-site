@@ -21,7 +21,9 @@ const SITE_CONFIG = {
   const normalizedDomain = (() => {
     try {
       const url = new URL(SITE_CONFIG.domain);
-      url.pathname = "/";
+      url.pathname = `${url.pathname.replace(/\/+$/, "")}/`;
+      url.search = "";
+      url.hash = "";
       return url.href;
     } catch (_error) {
       return "https://dahamjung.github.io/pyeongtaek-massage-site/";
