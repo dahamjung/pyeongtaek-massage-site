@@ -4,7 +4,7 @@
 
 ## 사이트 구조
 
-페이지 흐름은 `헤더 → 히어로 → 핵심 특징 → 코스·가격 → 서비스 → 지역 → 이용 장소 → 이용 절차 → 예약 전 안내 → FAQ → 최종 CTA → 푸터` 순서입니다. 첫 화면에는 방문 범위, 대표 가격, 예약 방식과 전화·문자·카카오톡 CTA를 배치했습니다.
+페이지 흐름은 `헤더 → 히어로 → 핵심 특징 → 코스·가격 → 서비스 → 지역 → 이용 장소 → 이용 절차 → 예약 전 안내 → FAQ → 최종 CTA → 푸터` 순서입니다. 첫 화면에는 방문 범위, 대표 가격, 예약 방식과 전화·문자 CTA를 배치했습니다.
 
 ## 파일 역할
 
@@ -26,16 +26,16 @@
 
 ```js
 const SITE_CONFIG = {
-  phone: "010-0000-0000",
-  sms: "010-0000-0000",
-  kakaoUrl: "#",
+  phone: "0507-1859-8915",
+  sms: "0507-1859-8915",
+  smsMessage: "사이트 보고 문의드립니다:) ",
   businessName: "상호명 입력",
   domain: "https://평택출장마사지.kr"
 };
 ```
 
 - 전화와 문자는 숫자·하이픈 형식 모두 사용할 수 있습니다.
-- `kakaoUrl`이 `#`이면 버튼 클릭 시 준비 중 안내만 표시합니다.
+- 문자 버튼을 누르면 `smsMessage`의 문구가 문자 앱에 미리 입력됩니다.
 - `domain`은 JavaScript가 canonical, Open Graph, Twitter 이미지 URL과 JSON-LD의 URL에 반영합니다.
 - 검색엔진이 JavaScript를 실행하지 않는 경우까지 대비하려면 `index.html`, `robots.txt`, `sitemap.xml`의 도메인도 함께 수정합니다.
 - CSS 또는 JavaScript를 배포 후 수정하면 `index.html`의 `?v=20260723-2` 값을 올려 기존 브라우저 캐시를 갱신하세요.
@@ -60,7 +60,7 @@ const SITE_CONFIG = {
 4. 키보드 Tab·Shift+Tab: 모든 링크와 버튼의 포커스 표시
 5. Escape: 열린 모바일 메뉴 닫기
 6. FAQ: 한 항목을 열면 기존에 열린 항목 닫기
-7. 전화 `tel:`, 문자 `sms:`, 카카오톡 URL과 각 `data-action` 값
+7. 전화 `tel:`, 문자 `sms:` URL과 각 `data-action` 값
 8. 브라우저 개발자 도구 Console 오류 유무
 
 ## CTA 이벤트 연결
@@ -69,7 +69,6 @@ const SITE_CONFIG = {
 
 - `data-action="phone-click"`
 - `data-action="sms-click"`
-- `data-action="kakao-click"`
 
 클릭 시 `site:cta-click` CustomEvent를 발생시킵니다. 페이지에 `window.dataLayer` 배열이 있으면 같은 action을 event 이름으로 push하므로, 향후 Google Tag Manager에서 수집할 수 있습니다. 코스 카드 버튼은 `course` 값도 함께 전달합니다.
 
@@ -100,9 +99,9 @@ const SITE_CONFIG = {
 
 ## 배포 전 placeholder 체크리스트
 
-- [ ] `SITE_CONFIG.phone`: 실제 전화번호
-- [ ] `SITE_CONFIG.sms`: 실제 문자 수신 번호
-- [ ] `SITE_CONFIG.kakaoUrl`: 실제 카카오톡 채널 또는 오픈채팅 URL
+- [x] `SITE_CONFIG.phone`: `0507-1859-8915`
+- [x] `SITE_CONFIG.sms`: `0507-1859-8915`
+- [x] `SITE_CONFIG.smsMessage`: `사이트 보고 문의드립니다:) `
 - [ ] `SITE_CONFIG.businessName`: 실제 상호명
 - [ ] 푸터 대표자명, 주소, 연락처
 - [ ] 개인정보처리방침 전문과 개인정보 책임자·문의처

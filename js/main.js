@@ -1,7 +1,7 @@
 const SITE_CONFIG = {
-  phone: "010-0000-0000",
-  sms: "010-0000-0000",
-  kakaoUrl: "#",
+  phone: "0507-1859-8915",
+  sms: "0507-1859-8915",
+  smsMessage: "사이트 보고 문의드립니다:) ",
   businessName: "상호명 입력",
   domain: "https://평택출장마사지.kr"
 };
@@ -46,7 +46,8 @@ const SITE_CONFIG = {
 
   function configureContactLinks() {
     const phoneHref = `tel:${digitsOnly(SITE_CONFIG.phone)}`;
-    const smsHref = `sms:${digitsOnly(SITE_CONFIG.sms)}`;
+    const smsSeparator = /iPad|iPhone|iPod/.test(navigator.userAgent) ? "&" : "?";
+    const smsHref = `sms:${digitsOnly(SITE_CONFIG.sms)}${smsSeparator}body=${encodeURIComponent(SITE_CONFIG.smsMessage)}`;
 
     document.querySelectorAll('[data-action="phone-click"]').forEach((link) => {
       link.setAttribute("href", phoneHref);
@@ -54,13 +55,6 @@ const SITE_CONFIG = {
 
     document.querySelectorAll('[data-action="sms-click"]').forEach((link) => {
       link.setAttribute("href", smsHref);
-    });
-
-    document.querySelectorAll('[data-action="kakao-click"]').forEach((link) => {
-      link.setAttribute("href", SITE_CONFIG.kakaoUrl || "#");
-      if (!SITE_CONFIG.kakaoUrl || SITE_CONFIG.kakaoUrl === "#") {
-        link.setAttribute("aria-label", "카카오톡 상담 링크 준비 중");
-      }
     });
 
     document.querySelectorAll("[data-config-phone]").forEach((element) => {
@@ -208,11 +202,6 @@ const SITE_CONFIG = {
     document.dispatchEvent(new CustomEvent("site:cta-click", { detail }));
     if (Array.isArray(window.dataLayer)) {
       window.dataLayer.push({ event: action, course });
-    }
-
-    if (action === "kakao-click" && (!SITE_CONFIG.kakaoUrl || SITE_CONFIG.kakaoUrl === "#")) {
-      event.preventDefault();
-      announce("카카오톡 상담 주소를 설정한 뒤 이용할 수 있습니다.");
     }
 
     if (action === "phone-click" && isPlaceholderPhone(SITE_CONFIG.phone)) {
