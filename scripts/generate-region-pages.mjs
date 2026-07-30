@@ -626,7 +626,7 @@ ${priceCards(region)}
       <div class="container">
         <div class="section-heading section-heading--center"><p class="eyebrow eyebrow--dark"><span></span> OTHER AREAS</p><h2 id="other-region-title">다른 평택 지역 안내</h2><p>현재 위치와 가까운 지역 페이지에서 방문 범위와 이용 조건을 확인하세요.</p></div>
         <div class="contextual-links" aria-labelledby="${region.slug}-nearby-title">
-          <h3 id="${region.slug}-nearby-title">${region.name}와 함께 살펴볼 인접 생활권</h3>
+          <h3 id="${region.slug}-nearby-title">${region.name}에서 함께 살펴볼 인접 생활권</h3>
           <p>지역별 이동 조건과 숙소·주거지 안내가 다르므로 실제 이용 장소와 가까운 상세 페이지를 확인해 보세요.</p>
           <nav class="contextual-link-grid" aria-label="${region.name} 인접 지역 상세 안내">${contextualLinkMarkup}</nav>
         </div>
